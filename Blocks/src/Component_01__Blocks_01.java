@@ -9,8 +9,8 @@ public class Component_01__Blocks_01 extends JComponent
 			Graphics2D g2 = (Graphics2D) g;
 			
 
-			int w = 10;
-			int h = 10;
+			int w = 20;
+			int h = 20;
 			int x = (getWidth() /2) - w/2;
 			int y = (getHeight() /2) - h/2;
 			
