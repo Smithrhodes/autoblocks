@@ -29,12 +29,38 @@ public class Block extends JComponent
 		
 		g2.setColor(Color.WHITE);
 		g2.fill(blockSlot);
+		
+		//this.step();
 	}
 	
-	public void step(){
+	public void step(Graphics g){
+		
+		
+		
+		move();
+		draw(g);
+		
+		
+//		if(BlocksViewer.input.down){
+//			System.out.println("'down' pressed");
+//		}
 		
 	}
 	public void move(){
+		
+		//MAGIC NUM to push player, MOVE INCREMENT in px
+		int move = 1;
+		
+		
+		//most simple move, if(button) move MAGIC toward dx,dy
+		if(BlocksViewer.input.right)
+			xPos += move;
+		if(BlocksViewer.input.left)
+			xPos -= move;
+		if(BlocksViewer.input.up)
+			yPos -= move;
+		if(BlocksViewer.input.down)
+			yPos += move;
 		
 	}
 	public void update(){

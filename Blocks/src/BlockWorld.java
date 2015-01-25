@@ -12,8 +12,6 @@ public class BlockWorld extends JComponent
 	private Block block;
 	
 	public BlockWorld(){
-
-
 		int w = 20;
 		int h = 20;
 		//int x = (getWidth() /2) - w/2;
@@ -28,7 +26,7 @@ public class BlockWorld extends JComponent
 			super.repaint();
 			//Graphics2D g2 = (Graphics2D) g;
 			drawOverlay(g);
-			block.draw(g);
+			block.step(g);
 
 		}
 		

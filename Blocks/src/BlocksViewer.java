@@ -25,6 +25,10 @@ public class BlocksViewer
 		frame.add(new BlockWorld());
 		frame.setResizable(false);
 		
+		frame.addKeyListener(input);
+		frame.addMouseListener(input);
+		frame.addMouseMotionListener(input);
+		
 		frame.setVisible(true);
 
 		
