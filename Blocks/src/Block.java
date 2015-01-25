@@ -31,19 +31,14 @@ public class Block extends JComponent
 		g2.fill(blockSlot);
 		
 		//this.step();
+		g.setColor(Color.blue);
+		g.drawString("xPos:" + xPos + "yPos:" + yPos, 600, 100);
 	}
 	
 	public void step(Graphics g){
 		
-		
-		
 		move();
 		draw(g);
-		
-		
-//		if(BlocksViewer.input.down){
-//			System.out.println("'down' pressed");
-//		}
 		
 	}
 	public void move(){
@@ -53,13 +48,13 @@ public class Block extends JComponent
 		
 		
 		//most simple move, if(button) move MAGIC toward dx,dy
-		if(BlocksViewer.input.right)
+		if(BlocksViewer.input.right && (xPos <= 765))
 			xPos += move;
-		if(BlocksViewer.input.left)
+		if(BlocksViewer.input.left &&(xPos >= 10))
 			xPos -= move;
-		if(BlocksViewer.input.up)
+		if(BlocksViewer.input.up&&(yPos >= 10))
 			yPos -= move;
-		if(BlocksViewer.input.down)
+		if(BlocksViewer.input.down&&(yPos <= 735))
 			yPos += move;
 		
 	}
